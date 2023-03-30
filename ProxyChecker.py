@@ -66,8 +66,8 @@ if __name__ == "__main__":
     proxy_types = ["http", "https", "socks4", "socks5"]
     working_files = {}
 
-    # Collect input directories
-    dir_path = input("Enter the directory where the proxy files are located: ")
+    # Set the default directory to C:\User\%USERNAME%\Documents\Proxies\
+    dir_path = os.path.join(os.path.expanduser("~"), "Documents", "Proxies")
 
     # Iterate over each proxy type and file and start scanning
     for proxy_type in proxy_types:
